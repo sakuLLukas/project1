@@ -1,7 +1,11 @@
-<h1>All users</h1>
+<h1>Games games</h1>
 
-<h2><%= @users.count %></h2>
+<h2>Total games:<%= @games.count %></h2>
 
-<% @users.each do |user| %>
-    <p><%= user.email %></p>
-<% end %>
+<ul>
+<% @games.each do |game| %>
+    <li>
+        <%= link_to game.title, game %>
+    </li>
+<% end%>
+</ul>

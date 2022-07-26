@@ -13,9 +13,10 @@
   <nav>
       <%= link_to 'Home', root_path %>
 
+      <%= link_to 'All Games', games_path  %>
+
       <% if @current_user.present? %>
-      <%= link_to "All users", users_path if @current_user.admin? %>
-      <%= link_to "Create mixtape", new_mixtape_path %>
+      <%= link_to "Create review", new_review_path %>
       <%= link_to "Logout #{ @current_user.email }", login_path, :method => 'delete' %>
     <% else %>
       <%= link_to 'Sign up', new_user_path %>
