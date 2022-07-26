@@ -1,3 +1,24 @@
-<h1>All games</h1>
+<h1><%= @game.title %></h1>
 
 
+<h2>
+    Developer: <%= @game.developer %>
+</h2>
+
+<br>
+
+<h3>
+    Description:
+</h3>
+
+<p>
+    <%= @game.description %>
+</p>
+
+<p>
+    <%= image_tag @game.image if @game.image.present? %>
+</p>
+
+<%= link_to 'Edit game', edit_game_path %>
+
+<%= link_to 'Delete game', game_path %>

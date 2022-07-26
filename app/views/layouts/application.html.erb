@@ -4,20 +4,27 @@
     <title>Project1</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
   </head>
 
   <body>
   <nav>
       <%= link_to 'Home', root_path %>
-
+      ||
       <%= link_to 'All Games', games_path  %>
-
+      ||
+      <%= link_to 'Add Game', new_game_path %>
+      ||
+      <%= link_to "All Reviews" %>
+      ||
       <% if @current_user.present? %>
       <%= link_to "Create review", new_review_path %>
+      ||
       <%= link_to "Logout #{ @current_user.email }", login_path, :method => 'delete' %>
+      ||
     <% else %>
       <%= link_to 'Sign up', new_user_path %>
       <%= link_to 'Sign in', login_path %>

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :reviews, :only => [:new, :create, :index]
 
-  resources :games, :only => [:new, :create, :index, :home, :show]
+  resources :games
 
   # Not in the database!
   get '/login' => 'session#new'
