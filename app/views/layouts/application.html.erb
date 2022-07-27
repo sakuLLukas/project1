@@ -12,15 +12,15 @@
 
   <body>
   <nav>
-      <%= link_to 'Home', root_path %>
+        <%= link_to 'Home', root_path %>
+      ||
+      <% if @current_user.present?%>
+      <%= link_to "All users", users_path if @current_user.admin?%>
       ||
       <%= link_to 'All Games', games_path  %>
       ||
       <%= link_to 'Add Game', new_game_path %>
       ||
-      <%= link_to "All Reviews" %>
-      ||
-      <% if @current_user.present? %>
       <%= link_to "Create review", new_review_path %>
       ||
       <%= link_to "Logout #{ @current_user.email }", login_path, :method => 'delete' %>

@@ -1,5 +1,8 @@
 <h1><%= @game.title %></h1>
 
+<h3>
+    Release date: <%= @game.release %>
+</h3>
 
 <h2>
     Developer: <%= @game.developer %>
@@ -21,4 +24,12 @@
 
 <%= link_to 'Edit game', edit_game_path %>
 
-<%= link_to 'Delete game', game_path %>
+<%= link_to "Delete Game", @game, :method => 'delete', :data => { :confirm => 'Please confirm.' } %>
+
+<h2>Reviews</h2>
+
+<% @game.reviews.each do |review| %>
+   <h3> <%= review.title %> </h3>
+    <p> <%= review.description %> </p>
+<% end %>
+

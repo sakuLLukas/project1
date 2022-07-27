@@ -57,3 +57,10 @@ u2 = User.create(:email => "nelson@ga.co", :password => "chicken")
 
 puts "#{ User.count } user created."
 
+############################################################
+                  # Association #
+############################################################
+
+puts "Game and Review"
+
+g1.reviews << r1

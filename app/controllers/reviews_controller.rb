@@ -10,6 +10,8 @@ class ReviewsController < ApplicationController
 
     def create 
         review = Review.create review_params
+        game = Game.find params[:review][:game_id]
+        game.reviews << review
         redirect_to reviews_path
     end
 
