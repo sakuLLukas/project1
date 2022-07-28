@@ -1,3 +1,5 @@
+<div class="newreview">
+
 <h1>Write a new review</h1>
 
 <% if @review.errors.any? %>
@@ -9,14 +11,32 @@
 <% end %>
 
 <%= form_for @review do |f| %>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
 
-    <%= f.label :description %>
-    <%= f.text_field :description %>
+    <div class="form-group">
 
-    <%= f.label :games_id %>
-    <%= f.select :game_id, Game.pluck(:title, :id), :include_blank => true %>
+        <%= f.label :title %>
+        
+        <%= f.text_field :title, :class => "form-control" %>
 
-    <%= f.submit "Create a new review!" %>
+    </div>
+
+    <div class="form-group">
+
+        <%= f.label :description %>
+
+        <%= f.text_field :description, :class => "form-control" %>
+
+    </div>
+
+    <div class="form-group">
+
+        <%= f.label :games_id %>
+
+        <%= f.select :game_id, Game.pluck(:title, :id), :include_blank => true, :class => "form-control" %>
+
+    </div>
+
+    <%= f.submit "Create a new review!", :class => "btn btn-secondary" %>
 <% end %>
+
+</div>

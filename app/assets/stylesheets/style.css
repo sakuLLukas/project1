@@ -3,7 +3,7 @@ body {
 }
 
 .bg-dark {
-    background-color: #343a4069 !important;
+    background-color: #c81e1ed6 !important;
 }
 
 a {
@@ -26,12 +26,22 @@ a {
     text-align: center;
 }
 
-.img1 {
-    max-width: 700px;
+.newreview {
+    max-width: 600px;
     margin: 0 auto;
+}
 
+.newgame {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.img1 {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .img1 > img {
-    max-width: 700px;
+    max-width: 900px;
+    border-radius: 8%;
 }
