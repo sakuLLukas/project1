@@ -2,6 +2,8 @@
 
 ## Features
 
+### Created using Ruby on rails, HTML, CSS, Bootstrap and deployed on herotu with posgreSQL.
+
 **View games that already have a title, description, developer, genre and image. You can also add new games with the same things mentioned above. As well as making reviews for games that are already listed or ones you have added.**
 
 **Must make an account to edit, delete add and review games.**
