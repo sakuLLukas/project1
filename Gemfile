@@ -52,3 +52,7 @@ end
 # Project gems
 
 gem 'youtube_rails'
+
+gem 'jquery-rails'
+
+gem 'bootstrap', '4.6.1'

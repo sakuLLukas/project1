@@ -45,15 +45,15 @@ puts "#{ Genre.count } genres created."
 
 Review.destroy_all 
 
-r1 = Review.create(:title => 'Red Dead Redemption 2 Review', :description => 'blah blah blah')
-r2 = Review.create(:title => 'Rust Review', :description => 'blah blah blah')
+r1 = Review.create(:title => 'Red Dead Redemption 2 Review', :description => 'Best story game I have ever played in my life.')
+r2 = Review.create(:title => 'Rust Review', :description => "Very cool game. Don't like getting raided though :(")
 
 puts "#{ Review.count } review created."
 
 User.destroy_all
 
-u1 = User.create(:email => "lukas@ga.co", :password => "chicken")
-u2 = User.create(:email => "nelson@ga.co", :password => "chicken")
+u1 = User.create :email => "lukas@ga.co", :password => "chicken", :admin => true
+u2 = User.create :email => "nelson@ga.co", :password => "chicken"
 
 puts "#{ User.count } user created."
 
@@ -64,3 +64,15 @@ puts "#{ User.count } user created."
 puts "Game and Review"
 
 g1.reviews << r1
+
+
+puts "Games and Genres"
+
+g1.genres << l3 << l4 << l11 << l12 
+g2.genres << l3 << l4 << l11 << l12
+g3.genres << l3 << l12
+g4.genres << l1 << l6 << l11
+g5.genres << l1 << l11
+g6.genres << l3 << l9 << l11
+g7.genres << l1 << l4 << l6 << l11
+

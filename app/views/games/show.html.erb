@@ -8,6 +8,10 @@
     Developer: <%= @game.developer %>
 </h2>
 
+<h2>
+    Genre: <%= @game.genres.pluck(:name).join ', ' %>
+</h2>
+
 <br>
 
 <h3>

@@ -1,4 +1,6 @@
 class GamesController < ApplicationController
+  before_action :check_for_login, :except => [:index, :show, :home]
+
   def home 
   end
   
