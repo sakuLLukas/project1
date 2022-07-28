@@ -1,39 +1,68 @@
-<h1><%= @game.title %></h1>
 
-<h3>
-    Release date: <%= @game.release %>
-</h3>
 
-<h2>
-    Developer: <%= @game.developer %>
-</h2>
+<div class="container">
 
-<h2>
-    Genre: <%= @game.genres.pluck(:name).join ', ' %>
-</h2>
+  <div class="row">
 
-<br>
+    <div class="col">
+      <h3>Release date: <%= @game.release %></h3>
+    </div>
+    
+    <div class="col-5">
+        <h1><%= @game.title %></h1>
+        <%= link_to 'Edit game', edit_game_path %>
+        <%= link_to "Delete Game", @game, :method => 'delete', :data => { :confirm => 'Please confirm.' } %>
+    </div>
 
-<h3>
-    Description:
-</h3>
+    <div class="col">
+        <h3>
+            Developer: <%= @game.developer %>
+        </h3>
+    </div>
+</div>
 
-<p>
-    <%= @game.description %>
-</p>
+<div class="row">
 
-<p>
-    <%= image_tag @game.image if @game.image.present? %>
-</p>
+    <div class="col">
+        <h3>
+            Description:
+        </h3>
+        <p>
+            <%= @game.description %>
+        </p>
+    </div>
+    
+    <div class="col-5">
+        <p>
+            <%= image_tag (@game.image), :class => "img-fluid" if @game.image.present?%>
+        </p>
+    </div>
 
-<%= link_to 'Edit game', edit_game_path %>
+    <div class="col">
+        <h3>
+            Genre: <%= @game.genres.pluck(:name).join ', ' %>
+        </h3>
+    </div>
+</div>
 
-<%= link_to "Delete Game", @game, :method => 'delete', :data => { :confirm => 'Please confirm.' } %>
+<div class="row">
 
-<h2>Reviews</h2>
+    <div class="col">
+    
+    </div>
 
-<% @game.reviews.each do |review| %>
-   <h3> <%= review.title %> </h3>
-    <p> <%= review.description %> </p>
-<% end %>
+    <div class="col-5">
+        <h2>Reviews</h2>
+        <% @game.reviews.each do |review| %>
+            <h3> <%= review.title %> </h3>
+            <p> <%= review.description %> </p>
+        <% end %>
+    </div>
+
+    <div class="col">
+    
+    </div>
+</div>
+
+</div>
 

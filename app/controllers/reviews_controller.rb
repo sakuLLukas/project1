@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-    
+    before_action :check_for_login
     def index
         @reviews = Review.all 
     end

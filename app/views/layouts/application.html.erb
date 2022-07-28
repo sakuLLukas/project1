@@ -10,7 +10,7 @@
   </head>
 
   <body>
-  <nav class="navbar navbar-dark bg-dark">
+  <nav class="navbar navbar-dark bg-dark" id="navigation">
 
       <%= link_to 'Home', root_path %>
       <% if @current_user.present?%>
@@ -20,7 +20,7 @@
       <%= link_to "Create review", new_review_path %>
       <%= link_to "Logout #{ @current_user.email }", login_path, :method => 'delete' %>
     <% else %>
-      <%= link_to 'Sign up', new_user_path %>
+  
       <%= link_to 'Sign in', login_path %>
     <% end %>
   </div>
