@@ -14,12 +14,3 @@
  *= require_self
  */
 
-
-body {
-    background-color: rgba(151, 146, 146, 0.466);
-}
-
-a {
-    color: black;
-    font-weight: 700;
-}
