@@ -10,22 +10,24 @@
   </head>
 
   <body>
-  <nav class="navbar navbar-dark bg-dark" id="navigation">
+    <nav class="navbar navbar-dark bg-dark" id="navigation">
 
-      <%= link_to 'Home', root_path %>
-      <% if @current_user.present?%>
-      <%= link_to "All users", users_path if @current_user.admin?%> <!-- makes sure only admins can see all users page-->
-      <%= link_to 'All Games', games_path  %>
-      <%= link_to 'Add Game', new_game_path %>
-      <%= link_to "Create review", new_review_path %>
-      <%= link_to "Logout #{ @current_user.email }", login_path, :method => 'delete' %>
-    <% else %>
+        <%= link_to 'Home', root_path %>
+        <% if @current_user.present?%>
+        <%= link_to "All users", users_path if @current_user.admin?%> <!-- makes sure only admins can see all users page-->
+        <%= link_to 'All Games', games_path  %>
+        <%= link_to 'Add Game', new_game_path %>
+        <%= link_to "Create review", new_review_path %>
+        <%= link_to "Logout #{ @current_user.email }", login_path, :method => 'delete' %>
+      <% else %>
   
-      <%= link_to 'Login', login_path %>
-    <% end %>
-  </div>
-  </nav>
+        <%= link_to 'Login', login_path %>
+
+      <% end %>
+    </nav>
+    
     <%= yield %>
+    
   </body>
 </html>
 
