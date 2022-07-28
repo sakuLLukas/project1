@@ -1,24 +1,20 @@
-# README
+# Game review website
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Features
 
-Things you may want to cover:
+** View games that already have a title, description, developer, genre and image. You can also add new games with the same things mentioned above. As well as making reviews for games that are already listed or ones you have added. **
 
-* Ruby version
+** Must make an account to edit, delete add and review games. **
 
-* System dependencies
+** Ruby version: ruby 2.7.6p219 **
 
-* Configuration
+** Database was created using Ruby on rails with posgreSQL 14. **
 
-* Database creation
+** I want to add more to this project. Those being:**
+** javascript to make it look nicer with some effects on the text, nav bar and images. ** 
 
-* Database initialization
+** Clean up the code some more. **
 
-* How to run the test suite
+** Properly fix up some of the CSS **
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Click 
