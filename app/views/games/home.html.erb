@@ -1,5 +1,20 @@
-<h1>Welcome!</h1>
+<div class="home">
 
-<p>Welcome back <%= @current_user.email if @current_user.present? %>!</p>
+<h1>Main Menu</h1>
 
-<p>Delve into this site and view any game ever made! If a game you love isn't here, simply add it to our vast library of games!</p>
+
+<p> <%= 'Welcome back ' + @current_user.email + '!' if @current_user.present? %> </p>
+
+<p>
+
+Delve into this site and view our collection of games! If a game you love isn't here, simply add it to our vast library of games! You can also add reviews to any game you'd like.
+
+</p>
+
+</div>
+
+<div class="img1">
+
+<%= image_tag("https://i.imgur.com/e5KWytf.png") %>
+
+</div>

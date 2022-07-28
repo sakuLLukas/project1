@@ -10,8 +10,8 @@
     
     <div class="col-5">
         <h1><%= @game.title %></h1>
-        <%= link_to 'Edit game', edit_game_path %>
-        <%= link_to "Delete Game", @game, :method => 'delete', :data => { :confirm => 'Please confirm.' } %>
+        <%= link_to 'Edit game', edit_game_path if @current_user.admin? %>
+        <%= link_to "Delete Game", @game, :method => 'delete', :data => { :confirm => 'Please confirm.' } if @current_user.admin? %>
     </div>
 
     <div class="col">

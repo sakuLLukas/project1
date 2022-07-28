@@ -2,7 +2,36 @@ body {
     background-color: rgba(151, 146, 146, 0.466);
 }
 
+.bg-dark {
+    background-color: #343a4069 !important;
+}
+
 a {
     color: black;
     font-weight: 700;
+}
+
+.signup {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.signin {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.home {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.img1 {
+    max-width: 700px;
+    margin: 0 auto;
+
+}
+
+.img1 > img {
+    max-width: 700px;
 }
