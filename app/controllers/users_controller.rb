@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :check_for_admin, :only => [:index]
-  before_action :check_for_login, :only => [:index]
+  before_action :check_for_admin, :only => [:index] # makes sure only admins can view all the users
+  before_action :check_for_login, :only => [:index] # makes sure u have to have an account
 
 
   def index

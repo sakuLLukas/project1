@@ -3,7 +3,7 @@ body {
 }
 
 .bg-dark {
-    background-color: #c81e1ed6 !important;
+    background-color: #c81e1ed6 !important; /* color for the nav bar */
 }
 
 a {
